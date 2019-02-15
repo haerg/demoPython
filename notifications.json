@@ -1,0 +1,161 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$100000$JwpiUkM9ReDZ$KYSPcdVq85mN0zpzvAEtFT8kZ2etBAc5LFF44UfwnxI=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "exampleuser",
+            "first_name": "Example",
+            "last_name": "User",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2018-06-06T18:00:00.886Z",
+            "email": "example@example.example",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$100000$JwpiUkM9ReDZ$KYSPcdVq85mN0zpzvAEtFT8kZ2etBAc5LFF44UfwnxI=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "demouser",
+            "first_name": "Demo",
+            "last_name": "User",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2018-06-06T18:00:00.886Z",
+            "email": "demo@example.example",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+
+    {
+        "model": "api.fsinstitution",
+        "pk": 1,
+        "fields": {
+            "name": "LP I",
+            "contact_name": null,
+            "contact_email": null,
+            "signed_nda": false,
+            "needs_to_sign": false,
+            "created_at": "2018-06-06T18:00:00.886Z",
+            "updated_at": "2018-06-06T18:00:00.886Z",
+            "is_investor": true,
+            "type": "LP",
+            "parent": 50
+        }
+    },
+    {
+        "model": "api.fsinstitution",
+        "pk": 50,
+        "fields": {
+            "name": "Trusted Insight",
+            "contact_name": null,
+            "contact_email": null,
+            "signed_nda": false,
+            "needs_to_sign": false,
+            "created_at": "2018-06-06T18:00:00.886Z",
+            "updated_at": "2018-06-06T18:00:00.886Z",
+            "is_investor": false,
+            "type": "GP",
+            "parent": null
+        }
+    },
+    {
+        "model": "api.fsinstitution",
+        "pk": 54,
+        "fields": {
+            "name": "TI Demo Foundation",
+            "contact_name": null,
+            "contact_email": null,
+            "signed_nda": false,
+            "needs_to_sign": false,
+            "created_at": "2018-06-06T18:00:00.886Z",
+            "updated_at": "2018-06-06T18:00:00.886Z",
+            "is_investor": true,
+            "type": "LP",
+            "parent": 50
+        }
+    },
+
+    {
+        "model": "api.fsinstitutionuser",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "institution": 50
+        }
+    },
+    {
+        "model": "api.fsinstitutionuser",
+        "pk": 2,
+        "fields": {
+            "user": 1,
+            "institution": 54
+        }
+    },
+    {
+        "model": "api.fsinstitutionuser",
+        "pk": 3,
+        "fields": {
+            "user": 2,
+            "institution": 54
+        }
+    },
+
+    {
+    "model": "api.fsinstitutionnotification",
+    "pk": 1,
+    "fields": {
+        "institution": 54,
+        "title": "TIPL I: Capital call #21",
+        "description": "You have capital call due 6/25",
+        "type": "email",
+        "created_at": "2018-06-06T18:00:00.886",
+        "updated_at": "2018-06-06T18:00:00.886"
+    }
+},
+    {
+        "model": "api.fsinstitutionnotification",
+        "pk": 2,
+        "fields": {
+            "institution": 54,
+            "title": "TIPL I: New investment",
+            "description": "We're please to announce a new investment in Robotics funds",
+            "type": "earth",
+            "created_at": "2018-06-06T18:00:00.886",
+            "updated_at": "2018-06-06T18:00:00.886"
+        }
+    },
+    {
+        "model": "api.fsinstitutionnotification",
+        "pk": 3,
+        "fields": {
+            "institution": 54,
+            "title": "TIPL I: 2018 Q1 Fund Update",
+            "description": "You can download our latest fund update here",
+            "type": "currency-usd",
+            "created_at": "2018-06-06T18:00:00.886",
+            "updated_at": "2018-06-06T18:00:00.886"
+        }
+    },
+    {
+        "model": "api.fsinstitutionnotification",
+        "pk": 4,
+        "fields": {
+            "institution": 54,
+            "title": "TIPL I: Companies in the news!",
+            "description": "Check the latest news from our portfolio company",
+            "type": "comment-check-outline",
+            "created_at": "2018-06-06T18:00:00.886",
+            "updated_at": "2018-06-06T18:00:00.886"
+        }
+    }
+]
