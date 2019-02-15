@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>Edit Notification</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <p>Notification title</p>
+    <input matInput [(ngModel)]="title">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select placeholder="Institutions" [(value)]="institution">
+      <mat-option *ngFor="let institution of institutions" [value]="institution.id">
+        {{institution.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button (click)="onYesClick()" cdkFocusInitial>Save</button>
+</div>
